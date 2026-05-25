@@ -134,9 +134,9 @@ export default async function Home() {
             {featuredPhotos.map((photo: any, i: number) => (
               <Link href={`/blog/${photo.postSlug}`} key={i} className="group overflow-hidden">
                 <img
-                  src={urlFor(photo.image).width(600).height(400).url()}
+                  src={urlFor(photo.image).width(600).height(600).url()}
                   alt={photo.caption || photo.postTitle}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </Link>
             ))}
